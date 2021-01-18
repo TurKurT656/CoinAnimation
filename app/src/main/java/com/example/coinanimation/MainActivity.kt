@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), Runnable {
             }
             handler.postDelayed(this, 50)
             coinCount++
-        }
+        } else handler.removeCallbacks(this)
     }
 
     override fun onPause() {
